@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.why.project.shortcutbadgerdemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--注册小米设备的角标服务【应用角标功能相关】【不建议在小米设备上使用，因为小米上只要打开APP，角标就会消失，目前项目中用不到】-->
+        <service
+            android:name="me.leolin.shortcutbadger.BadgeIntentService"
+            android:exported="false"></service>
+    </application>
+
+</manifest>
